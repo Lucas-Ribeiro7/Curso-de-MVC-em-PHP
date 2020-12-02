@@ -2,8 +2,19 @@
     class core{
         private $controller;
         private $metodo;
-        private $parametros = array();
+        private $parametros = array(); 
+
+        public function __construct(){
+            $this->verificarUrl();
+        }
+
         public function iniciar(){
+            $controllercorrente = $this->getController();
+            
+            $c = new $controllercorrente;
+            $c->lista();
+        }
+        public function verificarUrl(){
             //$_SERVER["PHP_SELF"] = Cria um espelho da URL que está
             $url = explode("index.php", $_SERVER["PHP_SELF"]); //Cria uma Array() tirando a posição que está entre aspas
             $url = end($url);//Ele coloca o valor da variavel igual a ultima posição do Array()
@@ -13,7 +24,7 @@
                 array_shift($url);//Exclui a primeira posição do Array
 
                 //Pega o controle
-                $this->setController(ucfirst($url[0]) . "Controller.php"); //ucfirst() deixa a primeira letra do nome em maiusculo 
+                $this->setController(ucfirst($url[0]) . "Controller"); //ucfirst() deixa a primeira letra do nome em maiusculo 
                 array_shift($url);
                 
                 //Pega o Metodo
@@ -29,13 +40,9 @@
             }else{
                 $this->setController("IndexController.php"); 
             }
-            /*
-            echo "<pre>";
-            print_r($url);
-            */
         }
         public function getController(){
-            return $this->controller;
+            return "app\\controllers\\" . $this->controller;
         }
         public function getMetodo(){
             return $this->metodo;
