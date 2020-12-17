@@ -6,7 +6,7 @@
             echo "Método Index (Cliente)";
         }
 
-        public function lista($valor){
+        public function lista($valor = 10){
             echo "<p>Estou listando os Clientes $valor</p>";
         }
     }

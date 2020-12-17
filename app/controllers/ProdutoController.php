@@ -6,7 +6,7 @@
             echo "Método Index (Produto)";
         }
 
-        public function lista($valor){
+        public function lista($valor = 10){
             echo "<p>Estou listando os Produtos $valor</p>";
         }
     }

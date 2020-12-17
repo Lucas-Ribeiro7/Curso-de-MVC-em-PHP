@@ -38,20 +38,20 @@
                     $this->setParametros(array_filter($url));
                 }
             }else{
-                $this->setController("IndexController"); 
+                $this->setController(ucfirst(strtolower(CONTROLLER_PADRAO)) . "Controller"); 
             }
         }
         public function getController(){
-            if(class_exists("app\\controllers\\" . $this->controller)){
-                return "app\\controllers\\" . $this->controller;
+            if(class_exists(NAMESPACE_CONTROLLER . $this->controller)){
+                return NAMESPACE_CONTROLLER . $this->controller;
             }
-            return "app\\controllers\\IndexController"; //Você pode chamar o index como chamei aí ou você pode dar um erro dizendo que esse controller não existe
+            return NAMESPACE_CONTROLLER . ucfirst(strtolower(CONTROLLER_PADRAO) . "Controller"); //Você pode chamar o index como chamei aí ou você pode dar um erro dizendo que esse controller não existe
         }
         public function getMetodo(){
-            if(method_exists("app\\controllers\\" . $this->controller, $this->metodo)){
+            if(method_exists(NAMESPACE_CONTROLLER . $this->controller, $this->metodo)){
                 return $this->metodo;
             }
-            return "index";
+            return METODO_PADRAO;
         }
         public function getParametros(){
             return $this->parametros;
