@@ -1,9 +1,9 @@
 <?php
-    require 'app/controllers/ClienteController.php';
-    require 'app/controllers/ProdutoController.php';
     require 'app/core/core.php';
+    require 'vendor/autoload.php';
     $core = new core();
     $core->iniciar();
+    
     echo "<p>Controller: " . $core->getController() . "</p>";
     echo "<p>Metodo: " . $core->getMetodo() . "</p>";
     $parametros = $core->getParametros();

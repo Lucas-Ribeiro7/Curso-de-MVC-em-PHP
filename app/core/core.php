@@ -12,7 +12,7 @@
             $controllercorrente = $this->getController();
             
             $c = new $controllercorrente;
-            $c->lista();
+            call_user_func_array(array($c, $this->getMetodo()), $this->getParametros()); //Essa função "call_user_func_array()" consiste em passar o objeto junto com o método e passar também os parametros do método
         }
         public function verificarUrl(){
             //$_SERVER["PHP_SELF"] = Cria um espelho da URL que está
@@ -24,7 +24,7 @@
                 array_shift($url);//Exclui a primeira posição do Array
 
                 //Pega o controle
-                $this->setController(ucfirst($url[0]) . "Controller"); //ucfirst() deixa a primeira letra do nome em maiusculo 
+                $this->setController(ucfirst(strtolower($url[0])) . "Controller"); //ucfirst() deixa a primeira letra do nome em maiusculo e o Método "strtolower()" serve para deixar as outras letras minuscula 
                 array_shift($url);
                 
                 //Pega o Metodo
@@ -38,14 +38,20 @@
                     $this->setParametros(array_filter($url));
                 }
             }else{
-                $this->setController("IndexController.php"); 
+                $this->setController("IndexController"); 
             }
         }
         public function getController(){
-            return "app\\controllers\\" . $this->controller;
+            if(class_exists("app\\controllers\\" . $this->controller)){
+                return "app\\controllers\\" . $this->controller;
+            }
+            return "app\\controllers\\IndexController"; //Você pode chamar o index como chamei aí ou você pode dar um erro dizendo que esse controller não existe
         }
         public function getMetodo(){
-            return $this->metodo;
+            if(method_exists("app\\controllers\\" . $this->controller, $this->metodo)){
+                return $this->metodo;
+            }
+            return "index";
         }
         public function getParametros(){
             return $this->parametros;
