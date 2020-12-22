@@ -2,14 +2,19 @@
     namespace app\controllers;
     
     use app\core\Controller;
+    use app\models\M_Cliente;
 
     class ClienteController extends Controller{
         public function index(){
             echo "Método Index (Cliente)";
         }
 
-        public function lista($valor = 10){
-            echo "<p>Estou listando os Clientes $valor</p>";
+        public function lista(){
+            $clientes = new M_Cliente;
+            echo "<pre>";
+            $lista = $clientes->lista();
+            var_dump($lista);
+            echo "</pre>";
         }
 
         public function ver(){
