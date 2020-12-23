@@ -11,10 +11,8 @@
 
         public function lista(){
             $clientes = new M_Cliente;
-            echo "<pre>";
-            $lista = $clientes->lista();
-            var_dump($lista);
-            echo "</pre>";
+            $dados['clientes'] = $clientes->lista();
+            $this->load("v_cliente", $dados);
         }
 
         public function ver(){

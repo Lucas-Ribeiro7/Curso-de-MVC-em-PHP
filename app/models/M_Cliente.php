@@ -8,8 +8,8 @@ class M_Cliente extends Model {
             parent::__construct(); //Chama o construtor da classe extendida
         }
         public function lista(){
-            $sql = 'SELECT * FROM pessoa';
-            $qry = $this->db->prepare($sql);
+            $sql = "SELECT * FROM pessoa";
+            $qry = $this->db->query($sql);
             return $qry->fetchAll();
         }
     }

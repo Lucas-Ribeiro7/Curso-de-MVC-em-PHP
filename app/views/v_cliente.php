@@ -9,7 +9,11 @@
     <h2>Curso de MVC</h2>
     <p>Aprendendo sobre MVC com PHP</p>
     <p>Vamos ver os Clientes</p>
-    <p>Nome do Cliente: <?php echo $nome ?></p>
-    <p>Email do Cliente: <?php echo $email ?></p>
+
+        <?php
+            foreach ($clientes as $cliente){
+                echo $cliente['nome'] . "<br>";
+            }
+        ?>
 </body>
 </html>
