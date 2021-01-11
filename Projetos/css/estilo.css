@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    vertical-align: middle;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+    text-transform: uppercase;
+}
+p{
+    line-height: 1,2em;
+    letter-spacing: 0;
+}
+input, select, textarea{
+    width: 100%;
+    padding: 10px;
+    background-color: #EEE;
+    border: 0;
+}
+ul,li,ol{
+    list-style: none;
+}
+div.conteudo{
+
+}
+div.base-central{
+
+}
+div.base-topo{
+    
+}
