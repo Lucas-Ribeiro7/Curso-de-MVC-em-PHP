@@ -29,11 +29,27 @@ ul,li,ol{
     list-style: none;
 }
 div.conteudo{
-
+    width: 940px;
+    margin: 2% auto;
+    display: block;
 }
 div.base-central{
-
+    width: 100%;
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+        -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+    box-shadow: 0 0 7px 0 rgb(31, 30, 30);
+        -webkit-box-shadow: 0 0 7px 0 rgb(31, 30, 30);
+            -moz-box-shadow: 0 0 7px 0 rgb(31, 30, 30);
 }
 div.base-topo{
-    
+    width: 100%;
+    display: block;
+    padding: 20px 40px;
+    background: rgb(115, 124, 128);
+    border-radius: 5px 5px 0 0;
+        -webkit-border-radius: 5px 5px 0 0;
+            -moz-border-radius: 5px 5px 0 0;
 }
