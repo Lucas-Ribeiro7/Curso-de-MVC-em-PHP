@@ -140,7 +140,7 @@ div.base-colunas .col span{
 }
 
 div.base-colunas .col:nth-of-type(2n+0){
-    float: right;
+    float: right; /*O 'nth-of-type(2n+0)' significa as duas colunas que estão a direita da div, iai ele jogou os dois para o lado direito para dividir um pouco*/
 }
 div.base-colunas .col .icone{
     width: 100%;
@@ -171,4 +171,57 @@ div.base-rodape p{
     font-size: .9em;
     color: rgb(95, 87, 87);
     text-transform: uppercase;
+}
+
+/*Base Formulário*/
+div.base-formulario{
+    padding: 10px 60px;
+}
+div.base-formulario label{
+    display: inline-block;
+    padding-top: 10px; /*Espaçamento de cima*/
+    padding-bottom: 5px; /*Espaçamento de baixo*/
+    font-size: .8em;
+    text-transform: uppercase;
+    color: #504a4a;
+}
+div.base-formulario .col{
+    width: 48%;
+    float: left;
+    margin-bottom: 15px;
+}
+div.base-formulario .col:nth-of-type(2n+0){
+    float: right;
+}
+div.base-formulario .btn.cad , 
+div.base-formulario .btn.limpar{
+    display: inline-block;
+    width: auto;
+    padding: 10px 25px;
+    margin-top: 30px;
+    cursor: pointer;
+   
+}
+div.base-formulario .btn.limpar{
+    background: #c7c7d3;
+    color: #484860;
+}
+div.base-formulario .btn.limpar:hover{
+    background: #919194;
+    
+}
+.btn{
+    display: block;
+    padding: 10px;
+    border-radius: 3px;
+        -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #484860;
+    font-size: .8em;
+}
+.btn:hover{
+    cursor: pointer; /*'hover' Significa quando você passar o mouse por ele*/
+    background: #31313a; ;
 }
