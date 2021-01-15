@@ -273,3 +273,53 @@ div.base-lista .tabela .btn.excluir{
 div.base-lista .tabela .btn.excluir:hover{
     background: #646161d3;
 }
+ul.paginacao{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 130px;
+}
+ul.paginacao li{
+    display: inline-block;
+}
+ul.paginacao .ativo{
+    display: inline-block;
+    background: #9b9ba3;
+    padding: 8px 13px;
+    font-size: .8em;
+    border-radius: 3px;
+        -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+}
+ul.paginacao li a{
+    display: inline-block;
+    background: #484860;
+    padding: 8px 13px;
+    font-size: .8em;
+    border-radius: 3px;
+        -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+}
+ul.paginacao li a:hover{
+    background: #717183;
+}
+ul.paginacao li .primeiro::before{
+    content: url(../img/anterior.png);
+    padding-right: 10px;
+}
+ul.paginacao li .ultimo::after{
+    content: url(../img/proximo.png);
+    padding-left: 10px;
+}
+ul.paginacao li .ant::before{
+    content: url(../img/ante.png);
+    padding-right: 10px;
+}
+ul.paginacao li .prox::after{
+    content: url(../img/prox.png);
+    padding-left: 10px;
+}
