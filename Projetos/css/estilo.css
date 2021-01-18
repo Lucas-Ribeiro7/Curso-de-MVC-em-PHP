@@ -273,6 +273,9 @@ div.base-lista .tabela .btn.excluir{
 div.base-lista .tabela .btn.excluir:hover{
     background: #646161d3;
 }
+div.base-lista.pesquisa span.qtde{
+    text-align: left;
+}
 ul.paginacao{
     display: block;
     text-align: center;
