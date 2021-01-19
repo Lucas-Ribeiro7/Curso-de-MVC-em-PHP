@@ -1,8 +1,9 @@
 <?php
     namespace app\controllers;
+    use app\core\Controller;
 
-    class IndexController{
+class IndexController extends Controller{
         public function index(){
-            echo "<p>Controller Padrão!</p>";
+            $this->load("template");
         }
     }
