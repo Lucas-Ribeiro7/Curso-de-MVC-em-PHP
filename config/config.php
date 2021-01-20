@@ -9,7 +9,7 @@
 
     define("SERVIDOR", "localhost");
 
-    define("BANCO", "cadastro");
+    define("BANCO", "cadastro_clientes");
 
     define("USUARIO", "root");
 
