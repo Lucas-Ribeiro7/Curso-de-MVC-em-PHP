@@ -14,4 +14,14 @@ class ClienteController extends Controller{
             $dados["view"] = "cliente/Create";
             $this->load("template", $dados);
         }
+        public function salvar(){
+            $cliente = new Cliente();
+            $nome = $_POST['txt_nome'];
+            $email = $_POST['txt_email'];
+            $telefone = $_POST['txt_fone'];
+            $cliente->inserir($nome, $email, $telefone);
+            
+            header("location:" . URL_BASE . "cliente");
+            
+        }
     }

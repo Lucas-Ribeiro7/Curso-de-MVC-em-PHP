@@ -1,30 +1,14 @@
             <div class="base-home">
                 <h1 class="titulo">Novo Cadastro</h1>
                 <div class="base-formulario">
-                    <form action="" method="">
+                    <form action="<?php echo URL_BASE . 'cliente/salvar' ?>" method="POST">
                         <label>Nome</label>
-                        <input type="text" name="" placeholder="Insira um Nome">
+                        <input type="text" name="txt_nome" placeholder="Insira um Nome">
                         <label>Email</label>
-                        <input type="text" name="" placeholder="Insira um Email">
-                        <label>Endereço</label>
-                        <input type="text" name="" placeholder="Insira um Endereço"> 
-                        <div class="col">
-                            <label>Telefone</label>
-                            <input type="text" name="" placeholder="Insira um Telefone">
-                        </div>
-                        <div class="col">
-                            <label>Bairro</label>
-                            <input type="text" name="" placeholder="Insira um Bairro">
-                        </div>
-                        <div class="col">
-                            <label>CEP</label>
-                            <input type="text" name="" placeholder="Insira um CEP">
-                        </div>
-                        <div class="col">
-                            <label>CPF</label>
-                            <input type="text" name="" placeholder="Insira um CPF">
-                        </div>
-
+                        <input type="text" name="txt_email" placeholder="Insira um Email">
+                        <label>Telefone</label>
+                        <input type="text" name="txt_fone" placeholder="Insira um Telefone">
+                       
                         <input type="submit" value="Cadastrar" class="btn cad">
                         <input type="reset" value="Limpar" class="btn limpar">
                     </form>

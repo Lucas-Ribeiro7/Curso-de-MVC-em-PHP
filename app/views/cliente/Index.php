@@ -14,6 +14,7 @@
                             </thead>
 
                             <tbody>
+                                <?php foreach($clientes as $cliente){ ?>
                                 <tr>
                                     <td>Exemplo 1 - Lucas</td>
                                     <td>Exemplo 1 - lucas@gmail.com</td>
@@ -25,28 +26,7 @@
                                         <a href="" class="btn excluir">Excluir</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Exemplo 2 - Lucas</td>
-                                    <td>Exemplo 2 - lucas@gmail.com</td>
-                                    <td>Exemplo 2 - 20502010202</td>
-                                    <td>
-                                        <a href="" class="btn editar">Editar</a>
-                                    </td>
-                                    <td>
-                                        <a href="" class="btn excluir">Excluir</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Exemplo 3 - Lucas</td>
-                                    <td>Exemplo 3 - lucas@gmail.com</td>
-                                    <td>Exemplo 3 - 20502010202</td>
-                                    <td>
-                                        <a href="" class="btn editar">Editar</a>
-                                    </td>
-                                    <td>
-                                        <a href="" class="btn excluir">Excluir</a>
-                                    </td>
-                                </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
