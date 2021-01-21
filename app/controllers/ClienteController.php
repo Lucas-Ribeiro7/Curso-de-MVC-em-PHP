@@ -20,7 +20,18 @@ class ClienteController extends Controller{
             $dados['view'] = "cliente/Edit";
             $this->load("template", $dados);
         }
-        public function delete($id_cliente){
+        public function delete($id_cliente, $excluir= NULL){
+            $cliente = new Cliente();
+            
+            
+            if($excluir == "S"){
+                $cliente->excluir($id_cliente);
+                header("location:" . URL_BASE . "cliente");
+                exit;
+
+            }
+            
+            $dados["cliente"] = $cliente->getCliente($id_cliente);
             $dados['view'] = "cliente/Delete";
             $this->load("template", $dados);
         }

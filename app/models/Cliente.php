@@ -36,5 +36,8 @@
         public function editar($id_cliente,$nome,$email,$telefone){
             $sql = $this->db->query("UPDATE clientes SET nome = '$nome', email = '$email', telefone = '$telefone' WHERE id_cliente = '$id_cliente'");
         }
+        public function excluir($id_cliente){
+            $sql = $this->db->query("DELETE FROM clientes WHERE id_cliente = '$id_cliente'");
+        }
         
     }
