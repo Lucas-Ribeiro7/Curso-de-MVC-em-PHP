@@ -11,6 +11,14 @@
             $qry = $this->db->query($sql);
             return $qry->fetchAll(\PDO::FETCH_OBJ);
         }
+        public function getCliente($id_cliente){
+            $resultado = array();
+            $sql = $this->db->query("SELECT * FROM clientes WHERE id_cliente = $id_cliente");
+            if($sql->rowCount() > 0){
+                $resultado = $sql->fetch(\PDO::FETCH_OBJ);
+            }
+            return $resultado;
+        }
         public function inserir($nome, $email, $fone){
             $sql = $this->db->query("INSERT INTO `clientes`(`nome`, `email`, `telefone`) VALUES ('$nome','$email','$fone')");
             
@@ -25,4 +33,8 @@
             return $this->db->lastInsertId();
             */
         }
+        public function editar($id_cliente,$nome,$email,$telefone){
+            $sql = $this->db->query("UPDATE clientes SET nome = '$nome', email = '$email', telefone = '$telefone' WHERE id_cliente = '$id_cliente'");
+        }
+        
     }
