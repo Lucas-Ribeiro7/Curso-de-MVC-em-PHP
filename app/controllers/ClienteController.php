@@ -4,6 +4,10 @@
     use app\models\Cliente;
 
 class ClienteController extends Controller{
+        public function home(){
+            $dados["view"] = "cliente/Home";
+            $this->load("template", $dados);
+        }
         public function index(){
             $cliente = new Cliente();
             $dados["clientes"] = $cliente->lista();
