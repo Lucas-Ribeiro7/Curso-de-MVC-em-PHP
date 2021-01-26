@@ -4,6 +4,7 @@
 
 class IndexController extends Controller{
         public function index(){
-            $this->load("template");
+            $dados["view"] = "cliente/home";
+            $this->load("template", $dados);
         }
     }
